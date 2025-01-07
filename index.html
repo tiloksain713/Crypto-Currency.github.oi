@@ -24,55 +24,60 @@
 />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
   <style>
   body {
       position: relative; 
   }
+
   </style>
-
-
-<!--   nav-bar  color-#49243E 
-       header   color- #704264
-       704264  DBAFA0
-
--->
 </head>
-<div class="ezy__nav2 light">
-	<nav class="navbar navbar-expand-lg  py-3">
+
+<div class="ezy__nav7 light">
+	<nav class="navbar navbar-expand-lg flex-column navbar-light py-3">
 		<div class="container">
 			<a class="navbar-brand" href="#">
-				Easy Frontend
+				LOGO
 			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-				aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ezy_nav7-navbar-text"
+				aria-controls="ezy_nav7-navbar-text" aria-expanded="false" aria-label="Toggle navigation">
 				<span>
 					<span></span>
 				</span>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarText">
+			<div class="collapse navbar-collapse" id="ezy_nav7-navbar-text">
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-4 mt-lg-0">
-					<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Services</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Why us?</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
-				</ul>
-				<ul class="navbar-nav flex-row mb-2 mb-lg-0 ms-lg-3">
-					<li class="nav-item me-2">
-						<button class="btn btn-outline-primary px-3">Sign Up</button>
-					</li>
 					<li class="nav-item">
-						<button class="btn btn-primary px-3">Log In</button>
+						<a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#ezy_nav7-navbar-search"
+							aria-expanded="false" aria-controls="ezy_nav7-navbar-search">
+							<span class="fas fa-search"></span>
+						</a>
 					</li>
 				</ul>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<div class="collapse w-100" id="ezy_nav7-navbar-search">
+				<form class="mt-4">
+					<div class="input-group">
+						<input class="form-control px-3" type="search" placeholder="City, Address, Zip" aria-label="Search" />
+						<button class="btn ezy__nav7-btn px-3" type="submit">Search</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</nav>
 </div>
 
 <style>
-.ezy__nav2 {
+.ezy__nav7 {
 	/* Bootstrap variables */
-	--bs-body-color: #000;
+	--bs-body-color:#47663B;
 	--bs-body-bg: rgb(255, 255, 255);
 
 	/* Easy Frontend variables */
@@ -83,54 +88,53 @@
 }
 
 /* Gray Block Style */
-.gray .ezy__nav2,
-.ezy__nav2.gray {
+.gray .ezy__nav7,
+.ezy__nav7.gray {
 	/* Bootstrap variables */
 	--bs-body-bg: rgb(246, 246, 246);
 }
 
 /* Dark Gray Block Style */
-.dark-gray .ezy__nav2,
-.ezy__nav2.dark-gray {
+.dark-gray .ezy__nav7,
+.ezy__nav7.dark-gray {
 	/* Bootstrap variables */
 	--bs-body-color: #ffffff;
 	--bs-body-bg: rgb(30, 39, 53);
 }
 
+
 /* Dark Block Style */
-.dark .ezy__nav2,
-.ezy__nav2.dark {
+.dark .ezy__nav7,
+.ezy__nav7.dark {
 	/* Bootstrap variables */
 	--bs-body-color: #ffffff;
 	--bs-body-bg: rgb(11, 23, 39);
-
-
 }
 
-.ezy__nav2 .navbar-brand {
+.ezy__nav7 .navbar-brand {
 	font-weight: 800;
 	font-size: 30px;
 	color: var(--bs-body-color);
 }
 
-.ezy__nav2 .navbar-toggler {
+.ezy__nav7 .navbar-toggler {
 	border: none;
 	box-shadow: none !important;
 }
 
-.ezy__nav2 .navbar-toggler>span {
+.ezy__nav7 .navbar-toggler>span {
 	display: flex;
 	align-items: center;
 	height: 32px;
 }
 
-.ezy__nav2 .navbar-toggler>span>span {
+.ezy__nav7 .navbar-toggler>span>span {
 	position: relative;
 }
 
-.ezy__nav2 .navbar-toggler>span>span,
-.ezy__nav2 .navbar-toggler>span>span::before,
-.ezy__nav2 .navbar-toggler>span>span::after {
+.ezy__nav7 .navbar-toggler>span>span,
+.ezy__nav7 .navbar-toggler>span>span::before,
+.ezy__nav7 .navbar-toggler>span>span::after {
 	height: 2px;
 	background-color: var(--bs-body-color);
 	width: 25px;
@@ -139,78 +143,88 @@
 	transition: all .35s ease-in-out;
 }
 
-.ezy__nav2 .navbar-toggler>span>span::before,
-.ezy__nav2 .navbar-toggler>span>span::after {
+.ezy__nav7 .navbar-toggler>span>span::before,
+.ezy__nav7 .navbar-toggler>span>span::after {
 	content: '';
 	position: absolute;
 	left: 0;
 }
 
-.ezy__nav2 .navbar-toggler[aria-expanded="false"]>span>span::before {
+.ezy__nav7 .navbar-toggler[aria-expanded="false"]>span>span::before {
 	top: 7px;
 }
 
-.ezy__nav2 .navbar-toggler[aria-expanded="false"]>span>span::after {
+.ezy__nav7 .navbar-toggler[aria-expanded="false"]>span>span::after {
 	bottom: 7px;
 }
 
-.ezy__nav2 .navbar-toggler[aria-expanded="true"]>span>span {
+.ezy__nav7 .navbar-toggler[aria-expanded="true"]>span>span {
 	background-color: transparent;
 }
 
-.ezy__nav2 .navbar-toggler[aria-expanded="true"]>span>span::before {
+.ezy__nav7 .navbar-toggler[aria-expanded="true"]>span>span::before {
 	top: 0;
 	transform: rotate(-45deg);
 }
 
-.ezy__nav2 .navbar-toggler[aria-expanded="true"]>span>span::after {
+.ezy__nav7 .navbar-toggler[aria-expanded="true"]>span>span::after {
 	bottom: 0;
 	transform: rotate(45deg);
 }
 
-.ezy__nav2 .navbar-nav .nav-link {
+.ezy__nav7 .navbar-nav .nav-link {
 	color: var(--bs-body-color);
 	opacity: .6;
 }
 
-.ezy__nav2 .navbar-nav .nav-link:hover,
-.ezy__nav2 .navbar-nav .nav-link:focus,
-.ezy__nav2 .navbar-nav .nav-link.active {
+.ezy__nav7 .navbar-nav .nav-link:hover,
+.ezy__nav7 .navbar-nav .nav-link:focus,
+.ezy__nav7 .navbar-nav .nav-link.active {
 	color: var(--bs-body-color);
 	opacity: 1;
 }
 
 @media (min-width: 992px) {
-	.ezy__nav2 .navbar-nav .nav-link {
+	.ezy__nav7 .navbar-nav .nav-link {
 		padding-right: 16px;
 		padding-left: 16px;
 	}
 }
 
-/* btns */
-.ezy__nav2 .btn-primary {
+.ezy__nav7 .btn {
+	border-radius: 10px;
+}
+
+.ezy__nav7-btn {
 	background-color: var(--ezy-theme-color);
-	border-color: var(--ezy-theme-color);
-}
-
-.ezy__nav2 .btn-primary:hover {
-	background-color: rgba(var(--ezy-theme-color-rgb), .9);
-	border-color: rgba(var(--ezy-theme-color-rgb), .9);
-}
-
-.ezy__nav2 .btn-outline-primary {
-	color: var(--ezy-theme-color);
-	border-color: var(--ezy-theme-color);
-}
-
-.ezy__nav2 .btn-outline-primary:hover {
 	color: #fff;
-	background-color: rgba(var(--ezy-theme-color-rgb), .9);
-	border-color: rgba(var(--ezy-theme-color-rgb), .9);
 }
-</style>
+.ezy__nav7-btn:hover {
+	background-color: rgba(var(--ezy-theme-color-rgb), .9);
+	color: #fff;
+}
 
-	<style>
+.ezy__nav7 .btn-light {
+	background-color: rgba(var(--ezy-btn-color-rgb), .1);
+	border-color: rgba(var(--ezy-btn-color-rgb), .1);
+	color: var(--bs-body-color);
+}
+
+.ezy__nav7 .form-control {
+	min-height: 48px;
+	line-height: 40px;
+	border-color: transparent;
+	background: rgba(163, 190, 241, .14);
+	border-radius: 10px;
+	color: var(--bs-body-color);
+}
+
+.ezy__nav7 .form-control:focus {
+	border-color: #86b7fe;
+	box-shadow: none;
+}
+
+	
 
 	
   :root{
